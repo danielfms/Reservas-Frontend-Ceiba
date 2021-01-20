@@ -1,0 +1,50 @@
+<!-- <nav>
+    <a id="linkReserva" routerLink="./" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }">Reserva</a>
+    <a id="linkCrearReserva" routerLink="./crear" routerLinkActive="active">Crear reserva</a>
+    <a id="linkCancelarProducto" routerLink="./cancelar" routerLinkActive="active">Cancelar reserva</a>
+    <a id="linkListarReserva" routerLink="./listar" routerLinkActive="active">listar reserva</a>
+  </nav>
+  <router-outlet></router-outlet>
+   -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1>Reserva vuelos nacionales</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <fieldset class="form-group">
+        <label>Ciudad origen</label>
+        <input type="text" class="form-control" name="ciudadOrigen" [(ngModel)]="ciudadOrigen">
+      </fieldset>
+    </div>
+    <div class="col-sm-4">
+      <fieldset class="form-group">
+        <label>Ciudad destino</label>
+        <input type="text" class="form-control" name="ciudadDestino"  [(ngModel)]="ciudadDestino">
+      </fieldset>
+    </div>
+    <div class="col-sm-4">
+      <fieldset class="form-group">
+        <label>Fecha</label>
+        <input type="date" class="form-control" name="fecha"  [(ngModel)]="fecha">
+      </fieldset>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <button class="btn btn-success" (click)="consultarDisponibilidad()">Consultar</button>
+    </div>
+  </div>
+
+  <div>
+  <app-listar-vuelo [items]="vuelos"></app-listar-vuelo>
+  </div>
+
+
+</div>

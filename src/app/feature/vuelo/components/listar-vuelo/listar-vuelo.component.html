@@ -1,0 +1,36 @@
+
+<div class="row">
+    <div class="col-sm">
+        <h1>Listado vuelos</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">CIUDAD ORIGEN</th>
+                <th scope="col">CIUDAD DESTINO</th>
+                <th scope="col">FECHA</th>
+                <th scope="col">AVION</th>
+                <th scope="col">DURACION</th>
+                <th scope="col">RESERVAR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of items">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.ciudadOrigen}}</td>
+                <td>{{item.ciudadDestino}}</td>
+                <td>{{item.fecha}}</td>
+                <td>{{item.matriculaAvion}}</td>
+                <td>{{item.duracion}}</td>
+                <td> 
+                  <button class="btn btn-primary" (click)="realizarReservar(item.id)">Reservar</button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

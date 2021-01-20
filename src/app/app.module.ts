@@ -7,6 +7,8 @@ import { HomeComponent } from '@home/home.component';
 import { ProductoModule } from '@producto/producto.module';
 import { CoreModule } from '@core/core.module';
 import { CookieService } from 'ngx-cookie-service';
+import { ReservaModule } from './feature/reserva/reserva.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,13 +16,15 @@ import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ProductoModule,
-    CoreModule
+    ReservaModule,
+    CoreModule,
+    FormsModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],
