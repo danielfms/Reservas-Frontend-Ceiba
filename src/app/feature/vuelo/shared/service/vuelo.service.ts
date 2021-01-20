@@ -14,4 +14,9 @@ export class VueloService {
     console.log(`${environment.endpoint}/vuelos/${ciudadOrigen}/${ciudadDestino}/${fecha}`)
     return this.http.doGet<Vuelo[]>(`${environment.endpoint}/vuelos/${ciudadOrigen}/${ciudadDestino}/${fecha}`);
   }
+
+  public consultarPorId(id: number) {
+    console.log(`${environment.endpoint}/vuelos/${id}`)
+    return this.http.doGet<Vuelo>(`${environment.endpoint}/vuelos/${id}`);
+  }
 }

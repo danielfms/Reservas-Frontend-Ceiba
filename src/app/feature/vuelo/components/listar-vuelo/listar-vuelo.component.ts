@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Vuelo } from '../../shared/model/Vuelo';
 
 @Component({
@@ -11,13 +12,13 @@ export class ListarVueloComponent implements OnInit {
   @Input()
   public items: Vuelo[];
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
 
   realizarReservar(id: number){
-    console.log(id);
+    this.route.navigate(["reserva", "crear", id]);
   }
 
 }

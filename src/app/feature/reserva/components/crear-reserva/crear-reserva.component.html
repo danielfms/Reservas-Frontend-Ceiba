@@ -1,1 +1,64 @@
-<h1>Crear reserva</h1>
+<div class="container">
+    <h1>Realizar Reserva</h1>
+
+    <form [formGroup]="reservaForm" (ngSubmit)="crear()">
+        <div class="row">
+            <input validar type="text" id="id" name="id" placeholder="Id reserva" class="form-control d-none"
+                formControlName="id">
+            <input validar type="text" id="activa" name="activa" placeholder="Activa" class="form-control d-none"
+            formControlName="activa">
+            <input validar type="text" id="token" name="token" placeholder="Token cancelacion" class="form-control d-none"
+            formControlName="token">
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label>Id vuelo:</label>
+            </div>
+            <div class="col-sm-4">
+                <input validar type="text" id="idVuelo" name="idVuelo" placeholder="Id vuelo" class="form-control"
+                    formControlName="idVuelo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label>Tipo identificacion:</label>
+            </div>
+            <div class="col-sm-4">
+                <input validar type="text" id="tipoIdentificacion" name="tipoIdentificacion"
+                    placeholder="Tipo identificacion" class="form-control" formControlName="tipoIdentificacion">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label>Numero identificacion:</label>
+            </div>
+            <div class="col-sm-4">
+                <input validar type="text" id="numeroIdentificacion" name="numeroIdentificacion"
+                    placeholder="Numero Identificacion" class="form-control" formControlName="numeroIdentificacion">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label>Pasajeros:</label>
+            </div>
+            <div class="col-sm-4">
+                <input validar type="text" id="pasajeros" name="pasajeros" placeholder="Cantidad pasajeros"
+                    class="form-control" formControlName="pasajeros">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label>Valor base:</label>
+            </div>
+            <div class="col-sm-4">
+                <input validar type="text" id="valorTotal" name="valorTotal" placeholder="Valor total"
+                    class="form-control" formControlName="valorTotal" readOnly>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <button class="btn btn-primary" type="submit">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>

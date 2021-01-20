@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ReservaRoutingModule } from '@reserva/reserva-routing.module';
 import { ListarVueloComponent } from './components/listar-vuelo/listar-vuelo.component';
 
 
@@ -8,6 +9,6 @@ import { ListarVueloComponent } from './components/listar-vuelo/listar-vuelo.com
   declarations: [
     ListarVueloComponent],
   exports:[ ListarVueloComponent],
-  imports:[CommonModule]
+  imports:[CommonModule, ReservaRoutingModule]
 })
 export class VueloModule { }

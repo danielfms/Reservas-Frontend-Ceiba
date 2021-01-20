@@ -7,10 +7,11 @@ export class Vuelo {
     ciudadOrigen: string;
     ciudadDestino: string;
     matriculaAvion: string;
+    valorBase: number;
 
 
     constructor(id: number, idDestino: number, idAvion: number, fecha: Date, duracion: number, ciudadOrigen: string,
-        ciudadDestino: string,  matriculaAvion: string) {
+        ciudadDestino: string,  matriculaAvion: string, valorBase:number) {
         this.id = id;
         this.idDestino = idDestino;
         this.idAvion = idAvion;
@@ -19,7 +20,7 @@ export class Vuelo {
         this.ciudadOrigen = ciudadOrigen;
         this.ciudadDestino = ciudadDestino;
         this.matriculaAvion = matriculaAvion;
+        this.valorBase = valorBase;
     }
-
 
 }
