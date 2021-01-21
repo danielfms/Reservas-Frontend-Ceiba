@@ -25,7 +25,12 @@ export class CrearAvionComponent implements OnInit {
 
   crear() {
     this.avionService.guardar(this.avionForm.value).subscribe(
-      response => console.log("ID", response)
+      response => {
+        console.log(response);
+      }
+      , error => {
+       console.log(error.error);
+      }
     )
   }
 

@@ -6,6 +6,8 @@ import { ReservaComponent } from './components/reserva/reserva.component';
 import { ReservaRoutingModule } from './reserva-routing.module';
 import { SharedModule } from '@shared/shared.module';
 import { VueloModule } from '../vuelo/vuelo.module';
+import { ConsultarDisponibilidadComponent } from './components/consultar-disponibilidad/consultar-disponibilidad.component';
+import { ListarReservaComponent } from './components/listar-reserva/listar-reserva.component';
 
 
 
@@ -13,7 +15,10 @@ import { VueloModule } from '../vuelo/vuelo.module';
   declarations: [
     CrearReservaComponent, 
     CancelarReservaComponent, 
-    ReservaComponent],
+    ReservaComponent,
+    ConsultarDisponibilidadComponent,
+    ListarReservaComponent
+  ],
   imports: [
     CommonModule,
     ReservaRoutingModule,

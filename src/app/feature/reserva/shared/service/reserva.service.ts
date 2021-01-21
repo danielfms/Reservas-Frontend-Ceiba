@@ -14,4 +14,9 @@ export class ReservaService {
     console.log(`${environment.endpoint}/reservas`, reserva)
     return this.http.doPost<Reserva, number>(`${environment.endpoint}/reservas`, reserva);
   }
+
+  public consultar() {
+    console.log(`${environment.endpoint}/reservas`)
+    return this.http.doGet<Reserva[]>(`${environment.endpoint}/reservas`);
+  }
 }

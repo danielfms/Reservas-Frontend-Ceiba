@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Reserva } from '@reserva/shared/model/Reserva';
+import { ReservaService } from '@reserva/shared/service/reserva.service';
 
 @Component({
   selector: 'app-listar-reserva',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listar-reserva.component.css']
 })
 export class ListarReservaComponent implements OnInit {
-
-  constructor() { }
+  items: Reserva[] = [];
+  constructor(private reservaService: ReservaService) { }
 
   ngOnInit(): void {
+    this.reservaService.consultar()
+    .subscribe(
+      response =>{
+        this.items = response;
+      }
+    )
   }
 
 }

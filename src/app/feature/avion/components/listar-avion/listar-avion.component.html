@@ -1,29 +1,31 @@
-
-<div class="row">
+<div class="container">
+  <div class="row">
     <div class="col-sm">
-        <h1>Listado aviones</h1>
+      <h1>Listado aviones</h1>
     </div>
-</div>
+  </div>
 
-<div class="row">
+  <div class="row">
     <div class="col-sm">
-        <table class="table" id="tablaListadoAviones">
-            <thead>
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">MATRICULA</th>
-                <th scope="col">PASAJEROS</th>
-                <th scope="col">-</th>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of items">
-                <th scope="row">{{item.id}}</th>
-                <td>{{item.matricula}}</td>
-                <td>{{item.pasajeros}}</td>
-                <td> 
-                  <button class="btn btn-primary" (click)="eliminar(item.id)">Eliminar</button></td>
-              </tr>
-            </tbody>
-          </table>
+      <table class="table" id="tablaListadoAviones">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">MATRICULA</th>
+            <th scope="col">PASAJEROS</th>
+            <th scope="col">-</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.matricula}}</td>
+            <td>{{item.pasajeros}}</td>
+            <td>
+              <button class="btn btn-primary" (click)="eliminar(item.id)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>

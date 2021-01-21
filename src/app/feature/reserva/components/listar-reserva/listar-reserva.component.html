@@ -1,1 +1,35 @@
-<p>listar-reserva works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h1>Listado reservas</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <table class="table" id="tablaListadoReservas">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">ID VUELO</th>
+                        <th scope="col">TIPO IDENTIFICACION</th>
+                        <th scope="col">NUMERO IDENTIFICACION</th>
+                        <th scope="col">PASAJEROS</th>
+                        <th scope="col">TOKEN</th>
+                        <th scope="col">VALOR TOTAL</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items">
+                        <td>{{item.id}}</td>
+                        <td>{{item.idVuelo}}</td>
+                        <td>{{item.tipoIdentificacion}}</td>
+                        <td>{{item.numeroIdentificacion}}</td>
+                        <td>{{item.pasajeros}}</td>
+                        <td>{{item.token}}</td>
+                        <td>{{item.valorTotal}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

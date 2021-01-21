@@ -6,9 +6,14 @@ export class ReservaPage {
     private inputFecha = element(by.id('fecha'));
     private botonConsultarVuelos = element(by.id('consultarVuelos'));
     private listaVuelos = element.all(by.css('#tablaListadoVuelos tr'));
+    private linkDisponibilidadReserva = element(by.id('linkDisponibilidadReserva'));
 
     async clickBotonConsultarVuelos() {
         await this.botonConsultarVuelos.click();
+    }
+
+    async clickLinkDisponibilidadReserva() {
+        await this.linkDisponibilidadReserva.click();
     }
 
     async ingresarCiudadOrigen(ciudad) {

@@ -21,6 +21,7 @@ describe('workspace-project Producto', () => {
 
         page.navigateTo();
         navBar.clickBotonReserva();
+        reserva.clickLinkDisponibilidadReserva();
         reserva.ingresarCiudadOrigen(CIUDAD_ORIGEN);
         reserva.ingresarCiudadDestino(CIUDAD_DESTINO);
         reserva.ingresarFecha(FECHA);
