@@ -9,6 +9,7 @@ import { CoreModule } from '@core/core.module';
 import { CookieService } from 'ngx-cookie-service';
 import { ReservaModule } from './feature/reserva/reserva.module';
 import { FormsModule } from '@angular/forms';
+import { AvionModule } from '@avion/avion.module';
 
 
 
@@ -16,7 +17,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     ProductoModule,
     ReservaModule,
     CoreModule,
-    FormsModule
+    FormsModule,
+    AvionModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],

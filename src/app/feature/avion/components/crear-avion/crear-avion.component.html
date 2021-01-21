@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Crear avion</h1>
+
+    <form  [formGroup]="avionForm" (ngSubmit)="crear()">
+        <div class="row">
+            <input validar type="text" id="id" name="id" placeholder="Id avion" class="form-control d-none"
+                formControlName="id">
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label>Matricula:</label>
+            </div>
+            <div class="col-sm-4">
+                <input validar type="text" id="matricula" name="idVuelo" placeholder="# matricula" class="form-control"
+                    formControlName="matricula">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label>Pasajeros:</label>
+            </div>
+            <div class="col-sm-4">
+                <input validar type="number" id="pasajeros" name="pasajeros"
+                    placeholder="Cantidad pasajeros" class="form-control" formControlName="pasajeros">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <button class="btn btn-primary" type="submit">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>

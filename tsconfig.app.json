@@ -20,6 +20,9 @@
       "@reserva/*": [
         "src/app/feature/reserva/*"
       ],
+      "@avion/*": [
+        "src/app/feature/avion/*"
+      ],
       "@shared/*": [
         "src/app/shared/*"
       ]
