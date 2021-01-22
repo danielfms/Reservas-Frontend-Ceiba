@@ -1,0 +1,42 @@
+<div class="container">
+    <h1>Crear destino</h1>
+
+    <form  [formGroup]="destinoForm" (ngSubmit)="crear()">
+        <div class="row">
+            <input validar type="text" id="id" name="id" class="form-control d-none"
+                formControlName="id">
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label>Ciudad origen:</label>
+            </div>
+            <div class="col-sm-4">
+                <input validar type="text" id="ciudadOrigen" name="ciudadOrigen" class="form-control"
+                    formControlName="ciudadOrigen">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label>Ciudad destino:</label>
+            </div>
+            <div class="col-sm-4">
+                <input validar type="text" id="ciudadDestino" name="ciudadDestino"
+                    class="form-control" formControlName="ciudadDestino">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label>Valor base:</label>
+            </div>
+            <div class="col-sm-4">
+                <input validar type="number" id="valorBase" name="valorBase"
+                     class="form-control" formControlName="valorBase">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <button class="btn btn-primary" type="submit" id="crearDestino">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>

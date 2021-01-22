@@ -1,0 +1,15 @@
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item active">
+            <a id="linkDestino" routerLink="./" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }">Destino</a>
+        </li>
+        <li class="list-group-item">
+            <a id="linkCrearDestino" routerLink="./crear" routerLinkActive="active">Crear destinos</a>
+        </li>
+        <li class="list-group-item">
+            <a id="linkListarDestino" routerLink="./listar" routerLinkActive="active">Listar destinos</a>
+        </li>
+    </ul>
+</div>
+<router-outlet></router-outlet>

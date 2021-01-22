@@ -8,6 +8,7 @@ const routes: Routes = [
   {  path: '', redirectTo: '/reserva/disponibilidad', pathMatch: 'full' },
   { path: 'reserva', loadChildren: () => import('@reserva/reserva.module').then(mod => mod.ReservaModule) },
   { path: 'avion', loadChildren: () => import('@avion/avion.module').then(mod => mod.AvionModule) },
+  { path: 'destino', loadChildren: () => import('@destino/destino.module').then(mod => mod.DestinoModule)},
 ];
 
 @NgModule({

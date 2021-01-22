@@ -10,6 +10,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { ReservaModule } from './feature/reserva/reserva.module';
 import { FormsModule } from '@angular/forms';
 import { AvionModule } from '@avion/avion.module';
+import { DestinoModule } from '@destino/destino.module';
 
 
 
@@ -26,7 +27,8 @@ import { AvionModule } from '@avion/avion.module';
     ReservaModule,
     CoreModule,
     FormsModule,
-    AvionModule
+    AvionModule,
+    DestinoModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],
