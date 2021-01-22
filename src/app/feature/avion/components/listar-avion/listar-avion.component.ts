@@ -9,7 +9,7 @@ import { AvionService } from '@avion/shared/service/avion.service';
 })
 export class ListarAvionComponent implements OnInit {
 
-  public items: Avion[];
+  public items: Avion[] = [];
   constructor(private avionService: AvionService) { }
 
   ngOnInit(): void {

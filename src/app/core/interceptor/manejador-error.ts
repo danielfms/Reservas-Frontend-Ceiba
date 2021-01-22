@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorHandler, Injectable } from '@angular/core';
+import Swal from 'sweetalert2';
 import { environment } from '../../../environments/environment';
 import { HTTP_ERRORES_CODIGO } from './http-codigo-error';
 
@@ -32,6 +33,12 @@ export class ManejadorError implements ErrorHandler {
     };
     if (!environment.production) {
       window.console.error('Error inesperado:\n', respuesta);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error inesperado...',
+        text: respuesta.mensaje.error.nombreExcepcion,
+        footer: respuesta.mensaje.error.mensaje
+      })
     }
   }
 

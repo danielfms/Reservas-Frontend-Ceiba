@@ -5,9 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  // { path: 'home', component: HomeComponent, canActivate: [SecurityGuard]  },
-  // { path: 'producto', loadChildren: () => import('@producto/producto.module').then(mod => mod.ProductoModule) },
+  {  path: '', redirectTo: '/reserva/disponibilidad', pathMatch: 'full' },
   { path: 'reserva', loadChildren: () => import('@reserva/reserva.module').then(mod => mod.ReservaModule) },
   { path: 'avion', loadChildren: () => import('@avion/avion.module').then(mod => mod.AvionModule) },
 ];

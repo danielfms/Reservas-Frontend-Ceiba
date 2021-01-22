@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AvionService } from '@avion/shared/service/avion.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { AvionService } from '@avion/shared/service/avion.service';
 })
 export class CrearAvionComponent implements OnInit {
   avionForm: FormGroup;
-  constructor(private avionService: AvionService) { }
+  constructor(private avionService: AvionService,
+    private route: Router) { }
 
   ngOnInit(): void {
     this.construirFormularioAvion();
@@ -27,11 +29,11 @@ export class CrearAvionComponent implements OnInit {
     this.avionService.guardar(this.avionForm.value).subscribe(
       response => {
         console.log(response);
-      }
-      , error => {
-       console.log(error.error);
+        this.route.navigate(["avion/listar"]);
       }
     )
   }
+
+  
 
 }
