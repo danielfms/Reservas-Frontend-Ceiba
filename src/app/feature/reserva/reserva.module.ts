@@ -8,6 +8,7 @@ import { SharedModule } from '@shared/shared.module';
 import { VueloModule } from '../vuelo/vuelo.module';
 import { ConsultarDisponibilidadComponent } from './components/consultar-disponibilidad/consultar-disponibilidad.component';
 import { ListarReservaComponent } from './components/listar-reserva/listar-reserva.component';
+import { ReservaService } from './shared/service/reserva.service';
 
 
 
@@ -25,6 +26,6 @@ import { ListarReservaComponent } from './components/listar-reserva/listar-reser
     SharedModule,
     VueloModule
   ],
-  providers: [DatePipe]
+  providers: [DatePipe, ReservaService]
 })
 export class ReservaModule { }
